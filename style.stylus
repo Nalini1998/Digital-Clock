@@ -1,0 +1,67 @@
+number-size = 4vmin
+
+lighter = #f9fbfd
+light = #FFCCBC
+bg = #FBE9E7
+dark = #EF5350
+primary = #B71C1C
+
+neo-thickness = number-size/4
+
+
+neo-shadow()
+  background-color light
+  box-shadow:
+    -1*neo-thickness -1*neo-thickness 2*neo-thickness -0.5*neo-thickness lighter, 
+    neo-thickness neo-thickness 2*neo-thickness dark
+
+*
+  box-sizing border-box
+  padding 0
+  margin 0
+  
+body
+  font-family: 'Roboto Mono', monospace
+  font-size number-size
+  min-height 100vh
+  display grid
+  overflow hidden
+  place-items center
+  background linear-gradient(-45deg, bg, light)
+  
+ 
+.hr, .min, .sec
+  display grid
+  grid-template-columns 1fr 1fr
+  grid-gap number-size
+  grid-row 1/2
+  align-items start
+  
+.number
+  user-select none
+  width number-size*2
+  height @width
+  display grid
+  place-items center
+  color lighter
+  transition all 500ms 100ms ease
+  border-radius 50%
+  
+  &.pop
+    color primary
+    font-weight bold
+    transform scale(1.3)
+    neo-shadow()
+  
+.strip
+  transition transform 500ms ease-in-out
+  border-radius (number-size/3)
+  neo-shadow()
+  
+ .clock
+   display grid
+   grid-template-columns repeat(3, 1fr)
+   grid-gap number-size*2
+   height number-size
+   position relative
+   padding 0 number-size

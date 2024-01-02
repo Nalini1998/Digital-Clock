@@ -1,2 +1,4 @@
-# Digital-Clock
-In this project, we will be storing the names and prices of a furniture store’s catalog in variables. You will then process the total price and item list of customers, printing them to the output terminal.
+# Neu Times !
+
+A Pen created on CodePen.io. Original URL: [https://codepen.io/Nalini1998/pen/jOdQJvX](https://codepen.io/Nalini1998/pen/jOdQJvX).
+

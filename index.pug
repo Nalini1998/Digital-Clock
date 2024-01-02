@@ -1,0 +1,16 @@
+mixin strip(x)
+  .strip
+    - let i = -1;
+    while i++ < x
+      .number= i
+      
+.clock 
+  .hr 
+    +strip(2)
+    +strip(4)
+  .min 
+    +strip(5)
+    +strip(9)
+  .sec 
+    +strip(5)
+    +strip(9)
